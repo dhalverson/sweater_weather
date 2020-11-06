@@ -10,6 +10,6 @@ RSpec.describe 'Retrieve weather' do
   end
 end
 
-GET /api/v1/forecast?location=denver,co
-Content-Type: application/json
-Accept: application/json
+# GET /api/v1/forecast?location=denver,co
+# Content-Type: application/json
+# Accept: application/json
