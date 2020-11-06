@@ -6,9 +6,9 @@ RSpec.describe 'Forecast PORO' do
         "dt": 1604704124,
         "sunrise": 1604669693,
         "sunset": 1604706738,
-        "temp": 292.41,
-        "feels_like": 286.57,
-        "humidity": 14,
+        "temp": 64.13,
+        "feels_like": 56.82,
+        "humidity": 21,
         "uvi": 3.27,
         "visibility": 10000,
         "weather": [
@@ -26,9 +26,9 @@ RSpec.describe 'Forecast PORO' do
     expect(forecast.dt).to eq(1604704124)
     expect(forecast.sunrise).to eq(1604669693)
     expect(forecast.sunset).to eq(1604706738)
-    expect(forecast.temp).to eq(292.41)
-    expect(forecast.feels_like).to eq(286.57)
-    expect(forecast.humidity).to eq(14)
+    expect(forecast.temp).to eq(64.13)
+    expect(forecast.feels_like).to eq(56.82)
+    expect(forecast.humidity).to eq(21)
     expect(forecast.uvi).to eq(3.27)
     expect(forecast.visibility).to eq(10000)
     expect(forecast.weather[0][:desription]).to eq('broken clouds')

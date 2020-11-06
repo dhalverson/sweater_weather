@@ -13,6 +13,7 @@ class Api::V1::ForecastController < ApplicationController
       req.params['lat'] = "#{city_coordinates[:lat]}"
       req.params['lon'] = "#{city_coordinates[:lng]}"
       req.params['exclude'] = 'minutely,alerts'
+      req.params['units'] = 'imperial'
     end
     data = JSON.parse(response.body, symbolize_names: true)
 
