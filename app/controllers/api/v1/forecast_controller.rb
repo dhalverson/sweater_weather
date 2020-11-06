@@ -5,7 +5,6 @@ class Api::V1::ForecastController < ApplicationController
       req.params['key'] = ENV['MAP_API_KEY']
       req.params['location'] = params[:location]
     end
-
     city_coordinates = JSON.parse(response.body, symbolize_names: true)[:results][0][:locations][0][:latLng]
 
     conn = Faraday.new('https://api.openweathermap.org')
@@ -16,6 +15,8 @@ class Api::V1::ForecastController < ApplicationController
       req.params['exclude'] = 'minutely,alerts'
     end
     data = JSON.parse(response.body, symbolize_names: true)
+
+    render json: data
   end
 end
 
