@@ -19,10 +19,8 @@ class ForecastFacade
 
     coordinates = LocationService.get_coordinates(location)
     json = ForecastService.get_forecast(coordinates)
-
     forecast = json
     require 'pry'; binding.pry
-    
   end
 
   private

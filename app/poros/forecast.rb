@@ -20,5 +20,8 @@ class Forecast
     @visibility = attr[:visibility]   
     @description = attr[:weather][0][:description]
     @icon = attr[:weather][0][:icon]
+
+    @date = Time.at(attr[:dt]).strftime('%m/%d/%Y')
+    require 'pry'; binding.pry
   end
 end
