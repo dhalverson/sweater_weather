@@ -19,4 +19,8 @@ class ForecastFacade
 
 
   end
+
+  private
+
+  
 end
