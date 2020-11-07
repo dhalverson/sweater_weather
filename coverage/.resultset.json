@@ -1,29 +1,15 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/poros/forecast.rb": {
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/location_service.rb": {
         "lines": [
           1,
           1,
+          1,
+          1,
+          1,
+          1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           null,
           null
@@ -61,12 +47,46 @@
           null,
           null,
           0,
+          null,
+          0,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/poros/forecast.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0
         ],
         "branches": {
         }
       }
     },
-    "timestamp": 1604708532
+    "timestamp": 1604713924
   }
 }
