@@ -1,8 +1,4 @@
 class ForecastFacade
-  def initialize
-    @coordinates = LocationService.get_coordinates(location)
-  end
-
   def self.total_forecast(location)
     forecast(location)
     require 'pry'; binding.pry
@@ -19,7 +15,8 @@ class ForecastFacade
   end
 
   def self.current_forecast(location)
-    json = ForecastService.get_forecast(@coordinates)
+    coordinates = LocationService.get_coordinates(location)
+    json = ForecastService.get_forecast(coordinates)
     current = json[:current]
     data = {
       dt:  current[:dt],
@@ -37,7 +34,8 @@ class ForecastFacade
   end
 
   def self.daily_forecast(location)
-    json = ForecastService.get_forecast(@coordinates)
+    coordinates = LocationService.get_coordinates(location)
+    json = ForecastService.get_forecast(coordinates)
     json[:daily_forecast][0..4].map do |day|
       data = {
         date: day[:dt],
