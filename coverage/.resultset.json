@@ -1,8 +1,73 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/facades/forecast_facade.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/location_service.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/forecast_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -24,33 +89,13 @@
         "branches": {
         }
       },
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/facades/forecast_facade.rb": {
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/forecast_serializer.rb": {
         "lines": [
           0,
           0,
           0,
           0,
           0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
           0
         ],
         "branches": {
@@ -87,6 +132,6 @@
         }
       }
     },
-    "timestamp": 1604713924
+    "timestamp": 1604718263
   }
 }
