@@ -1,4 +1,14 @@
 class Forecast
+  attr_reader :dt,
+              :sunrise,
+              :sunset,
+              :temp,
+              :feels_like,
+              :humidity,
+              :uvi,
+              :visibility,
+              :description,
+              :icon
   def initialize(attr)
     @dt = Time.at(attr[:dt]).strftime('%m/%d/%Y %H:%M %Z')
     @sunrise = Time.at(attr[:sunrise]).strftime('%m/%d/%Y %H:%M %Z')   
@@ -8,7 +18,7 @@ class Forecast
     @humidity = attr[:humidity]   
     @uvi = attr[:uvi]   
     @visibility = attr[:visibility]   
-    @description = attr[:weather[:description]]   
-    @icon = attr[:weather[:icon]]   
+    @description = attr[:weather][0][:description]
+    @icon = attr[:weather][0][:icon]
   end
 end
