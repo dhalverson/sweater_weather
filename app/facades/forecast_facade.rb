@@ -1,44 +1,69 @@
 class ForecastFacade
-  def self.get_forecast(location)
-    # conn = Faraday.new('http://www.mapquestapi.com')
-    # response = conn.get('/geocoding/v1/address') do |req|
-    #   req.params['key'] = ENV['MAP_API_KEY']
-    #   req.params['location'] = location
-    # end
-    # city_coordinates = JSON.parse(response.body, symbolize_names: true)[:results][0][:locations][0][:latLng]
+  def initialize
+    @coordinates = LocationService.get_coordinates(location)
+  end
 
-    # conn = Faraday.new('https://api.openweathermap.org')
-    # response = conn.get('/data/2.5/onecall') do |req|
-    #   req.params['appid'] = ENV['WEATHER_API_KEY']
-    #   req.params['lat'] = "#{city_coordinates[:lat]}"
-    #   req.params['lon'] = "#{city_coordinates[:lng]}"
-    #   req.params['exclude'] = 'minutely,alerts'
-    #   req.params['units'] = 'imperial'
-    # end
-    # data = JSON.parse(response.body, symbolize_names: true)
-
-    coordinates = LocationService.get_coordinates(location)
-    json = ForecastService.get_forecast(coordinates)
-    forecast = json
+  def self.total_forecast(location)
+    forecast(location)
     require 'pry'; binding.pry
   end
 
-  private
+  private_class_method
 
-  # def self.location_details(location)
-  #   location_details = LocationService.get_coordinates(location)
+  def self.forecast(location)
+    data = {
+      current_forecast: current_forecast(location),
+      daily_forecast: daily_forecast(location),
+      hourly_forecast: hourly_forecast(location)
+    }
+  end
 
-  # end
+  def self.current_forecast(location)
+    json = ForecastService.get_forecast(@coordinates)
+    current = json[:current]
+    data = {
+      dt:  current[:dt],
+      sunrise:  current[:sunrise],
+      sunset: current[:sunset],
+      temp: current[:temp],
+      feels_like: current[:feels_like],
+      humidity: current[:humidity],
+      uvi: current[:uvi],
+      visibility: current[:visibility],
+      description: current[:weather][0][:description],
+      icon: current[:weather][0][:icon]
+    }
+    CurrentForecast.new(data)
+  end
 
-  # def self.forecast_details(location)
-  #   forecast_details = ForecastService.get_forecast(location)
-  #   Forecast.new(forecast_details)
-  # end
+  def self.daily_forecast(location)
+    json = ForecastService.get_forecast(@coordinates)
+    json[:daily_forecast][0..4].map do |day|
+      data = {
+        date: day[:dt],
+        sunrise: day[:sunrise],
+        sunset: day[:sunset],
+        max_temp: day[:temp][:max],
+        min_temp: day[:temp[:mix]],
+        conditions: day[:weather][0][:description],
+        icon: day[:weather][0][:icon]
+      }
+    end
+    DailyForecast.new(data)
+  end
 
-
-
-  # def location_service(location)
-  #   LocationService.get_coordinates(location)
-  # end
-  
+  def self.hourly_forecast(location)
+    coordinates = LocationService.get_coordinates(location)
+    json = ForecastService.get_forecast(coordinates)
+    json[:hourly_forecast][0..7].map do |hour|
+      data = {
+        time: hour[:dt],
+        wind_speed: hour[:wind_speed],
+        wind_direction: hour[:wind_deg],
+        conditions: hour[:weather][0][:description],
+        icon: hour[:weather][0][:icon]
+      }
+    end
+    HourlyForecast.new(data)
+  end
 end
