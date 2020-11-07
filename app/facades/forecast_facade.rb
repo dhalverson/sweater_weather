@@ -1,7 +1,6 @@
 class ForecastFacade
   def self.total_forecast(location)
     forecast(location)
-    require 'pry'; binding.pry
   end
 
   private_class_method

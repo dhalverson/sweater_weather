@@ -1,7 +1,6 @@
 class Api::V1::ForecastController < ApplicationController
   def show
-    forecast = ForecastFacade.total_forecast(params[:location])
-    render json: ForecastSerializer.new(forecast)
+    render json: ForecastSerializer.new(ForecastFacade.total_forecast(params[:location]))
     # conn = Faraday.new('http://www.mapquestapi.com')
     # response = conn.get('/geocoding/v1/address') do |req|
     #   req.params['key'] = ENV['MAP_API_KEY']
