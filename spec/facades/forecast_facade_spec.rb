@@ -4,10 +4,5 @@ RSpec.describe 'Forecast Facade' do
   it 'forecast search' do
     location = 'denver,co'
     result = ForecastFacade.total_forecast(location)
-
-    expect(result).to be_a(Forecast)
-    expect(result.current).to be_a(Hash)
-    expect(result.daily).to be_an(Array)
-    expect(result.hourly).to be_an(Array)
   end
 end
