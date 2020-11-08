@@ -12,7 +12,7 @@ class HourlyForecast
     @icon = attr[:weather][0][:icon]
   end
 
-  def self.cardinal_direction(degree)
+  def cardinal_direction(degree)
     return ["N","NNE","NE","ENE","E","ESE", "SE", "SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"][(degree/22.5)%16]
   end
 end
