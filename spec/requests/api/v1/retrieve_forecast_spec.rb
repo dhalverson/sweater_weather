@@ -17,7 +17,9 @@ RSpec.describe 'Retrieve weather' do
 
     expect(forecast[:data][:attributes][:current_weather]).to be_a(Hash)
     expect(forecast[:data][:attributes][:daily_weather]).to be_an(Array) 
+    expect(forecast[:data][:attributes][:daily_weather].count).to eq(5)
     expect(forecast[:data][:attributes][:hourly_weather]).to be_an(Array)
+    expect(forecast[:data][:attributes][:hourly_weather].count).to eq(8)
 
     expect(forecast[:data][:attributes][:current_weather][:dt]).to be_a(String)
     expect(forecast[:data][:attributes][:current_weather][:sunrise]).to be_a(String)
@@ -30,13 +32,19 @@ RSpec.describe 'Retrieve weather' do
     expect(forecast[:data][:attributes][:current_weather][:description]).to be_a(String)
     expect(forecast[:data][:attributes][:current_weather][:icon]).to be_a(String)
     
-    expect(forecast[:data][:attributes][:daily_weather][:date]).to be_a(String)
-    expect(forecast[:data][:attributes][:daily_weather][:sunrise]).to be_a(String)
-    expect(forecast[:data][:attributes][:daily_weather][:sunset]).to be_a(String)
-    expect(forecast[:data][:attributes][:daily_weather][:max_temp]).to be_a(Float)
-    expect(forecast[:data][:attributes][:daily_weather][:min_temp]).to be_a(Float)
-    expect(forecast[:data][:attributes][:daily_weather][:conditions]).to be_a(String)
-    expect(forecast[:data][:attributes][:daily_weather][:icon]).to be_a(String)
+    expect(forecast[:data][:attributes][:daily_weather][0][:date]).to be_a(String)
+    expect(forecast[:data][:attributes][:daily_weather][0][:sunrise]).to be_a(String)
+    expect(forecast[:data][:attributes][:daily_weather][0][:sunset]).to be_a(String)
+    expect(forecast[:data][:attributes][:daily_weather][0][:max_temp]).to be_a(Float)
+    expect(forecast[:data][:attributes][:daily_weather][0][:min_temp]).to be_a(Float)
+    expect(forecast[:data][:attributes][:daily_weather][0][:conditions]).to be_a(String)
+    expect(forecast[:data][:attributes][:daily_weather][0][:icon]).to be_a(String)
+
+    expect(forecast[:data][:attributes][:hourly_weather][0][:time]).to be_a(String)
+    expect(forecast[:data][:attributes][:hourly_weather][0][:wind_speed]).to be_a(Float)
+    expect(forecast[:data][:attributes][:hourly_weather][0][:wind_direction]).to be_a(String)
+    expect(forecast[:data][:attributes][:hourly_weather][0][:conditions]).to be_a(String)
+    expect(forecast[:data][:attributes][:hourly_weather][0][:icon]).to be_a(String)
   end
 end
 
