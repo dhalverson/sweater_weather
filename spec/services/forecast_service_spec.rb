@@ -7,7 +7,6 @@ RSpec.describe 'Forecast Service' do
 
     expect(result).to be_a(Hash)
 
-
     expect(result).to have_key :current
     expect(result).to have_key :hourly
     expect(result).to have_key :daily
@@ -37,9 +36,36 @@ RSpec.describe 'Forecast Service' do
     expect(current[:weather][0]).to have_key :icon
     expect(current[:weather][0][:icon]).to be_a(String)
 
-    hourly = result[:hourly]
-    require 'pry'; binding.pry
+    expect(result[:hourly]).to be_an(Array)
+    hourly = result[:hourly][0]
 
+    expect(hourly).to have_key :dt
+    expect(hourly[:dt]).to be_an(Integer)
+    expect(hourly).to have_key :wind_speed
+    expect(hourly[:wind_speed]).to be_a(Float)
+    expect(hourly).to have_key :wind_deg
+    expect(hourly[:wind_deg]).to be_an(Integer)
+    expect(hourly[:weather][0]).to have_key :description
+    expect(hourly[:weather][0][:description]).to be_a(String)
+    expect(hourly[:weather][0]).to have_key :icon
+    expect(hourly[:weather][0][:icon]).to be_a(String)
 
+    expect(result[:daily]).to be_an(Array)
+    daily = result[:daily][0]
+
+    expect(daily).to have_key :dt
+    expect(daily[:dt]).to be_an(Integer)
+    expect(daily).to have_key :sunrise
+    expect(daily[:wind_speed]).to be_a(Float)
+    expect(daily).to have_key :sunset
+    expect(daily[:wind_deg]).to be_an(Integer)
+    expect(daily[:temp]).to have_key :max
+    expect(daily[:temp][:max]).to be_a(Float)
+    expect(daily[:temp]).to have_key :min
+    expect(daily[:temp][:min]).to be_a(Float)
+    expect(daily[:weather][0]).to have_key :description
+    expect(daily[:weather][0][:description]).to be_a(String)
+    expect(daily[:weather][0]).to have_key :icon
+    expect(daily[:weather][0][:icon]).to be_a(String)
   end
 end
