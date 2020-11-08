@@ -1339,6 +1339,7 @@ RSpec.describe 'Forecast PORO' do
     expect(forecast.current_weather.icon).to eq('01d')
     
     expect(forecast.hourly_weather.first.time).to eq('11:00:00 MST')
+    expect(forecast.hourly_weather.first.temp).to eq(55.08)
     expect(forecast.hourly_weather.first.wind_speed).to eq(11.83)
     expect(forecast.hourly_weather.first.wind_direction).to eq('S')
     expect(forecast.hourly_weather.first.conditions).to eq('clear sky')
