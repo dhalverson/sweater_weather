@@ -109,22 +109,24 @@
       "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/poros/forecast.rb": {
         "lines": [
           1,
-          null,
-          1,
-          1,
-          1,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
           1,
           null,
           null,
           1,
           1,
-          2,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          8,
           null,
           null,
           null
@@ -167,12 +169,11 @@
           null,
           null,
           1,
-          2,
-          1,
-          1,
-          1,
-          1,
-          1,
+          8,
+          8,
+          8,
+          8,
+          8,
           null,
           null
         ]
@@ -223,6 +224,6 @@
         }
       }
     },
-    "timestamp": 1604808512
+    "timestamp": 1604808999
   }
 }
