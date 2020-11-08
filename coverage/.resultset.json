@@ -1,8 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/location_service.rb": {
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/forecast_service.rb": {
         "lines": [
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -179,11 +182,8 @@
         "branches": {
         }
       },
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/forecast_service.rb": {
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/location_service.rb": {
         "lines": [
-          0,
-          0,
-          0,
           0,
           0,
           0,
@@ -199,6 +199,6 @@
         }
       }
     },
-    "timestamp": 1604800032
+    "timestamp": 1604801623
   }
 }
