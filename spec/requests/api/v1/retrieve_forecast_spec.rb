@@ -46,4 +46,14 @@ RSpec.describe 'Retrieve weather' do
     expect(forecast[:data][:attributes][:hourly_weather][0][:conditions]).to be_a(String)
     expect(forecast[:data][:attributes][:hourly_weather][0][:icon]).to be_a(String)
   end
+
+  it 'responds if no params are provided' do
+    get '/api/v1/forecast'
+
+    expect(response).to be_successful
+    
+    forecast = JSON.parse(response.body, symbolize_names: true)
+    expect(forecast[:error]).to eq('Please enter a valid city and state!')
+    expect(forecast[:status]).to eq(404)
+  end
 end
