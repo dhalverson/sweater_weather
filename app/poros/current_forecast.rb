@@ -9,8 +9,8 @@ class CurrentForecast
               :visibility,
               :description,
               :icon
+              
   def initialize(attr)
-
     @dt = Time.at(attr[:dt]).strftime('%m/%d/%Y %H:%M %Z')
     @sunrise = Time.at(attr[:sunrise]).strftime('%m/%d/%Y %H:%M %Z')
     @sunset = Time.at(attr[:sunset]).strftime('%m/%d/%Y %H:%M %Z')

@@ -31,6 +31,7 @@ RSpec.describe 'Hourly Forecast PORO' do
     expect(hourly_forecast).to be_a(HourlyForecast)
 
     expect(hourly_forecast.time).to eq('11:00:00 MST')
+    expect(hourly_forecast.temp).to eq(55.08)
     expect(hourly_forecast.wind_speed).to eq(11.83)
     expect(hourly_forecast.wind_direction).to eq('S')
     expect(hourly_forecast.conditions).to eq('clear sky')
