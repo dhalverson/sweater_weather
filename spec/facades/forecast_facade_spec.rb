@@ -6,6 +6,5 @@ RSpec.describe 'Forecast Facade' do
     result = ForecastFacade.total_forecast(location)
 
     expect(result).to be_a(Forecast)
-    require 'pry'; binding.pry
   end
 end

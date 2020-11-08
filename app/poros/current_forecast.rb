@@ -18,7 +18,7 @@ class CurrentForecast
     @humidity = attr[:humidity]
     @uvi = attr[:uvi]
     @visibility = attr[:visibility]
-    @description = attr[:description]
-    @icon = attr[:icon]
+    @description = attr[:weather][0][:description]
+    @icon = attr[:weather][0][:icon]
   end
 end

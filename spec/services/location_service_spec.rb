@@ -5,7 +5,6 @@ RSpec.describe 'Location Service' do
     location = 'denver,co'
     result = LocationService.get_coordinates(location)
 
-    require 'pry'; binding.pry
     expect(result).to be_a(Hash)
     expect(result).to have_key :lat
     expect(result[:lat]).to be_a(Float)
