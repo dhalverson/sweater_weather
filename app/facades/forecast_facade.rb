@@ -1,7 +1,8 @@
 class ForecastFacade
   def self.total_forecast(location)
     coordinates = LocationService.get_coordinates(location)
-    current_json = ForecastService.get_forecast(coordinates)
+    json = ForecastService.get_forecast(coordinates)
+    Forecast.new(json)
   end
 
   private_class_method
