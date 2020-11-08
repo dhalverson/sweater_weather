@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-11-08T12:22:26-07:00">2020-11-08T12:22:26-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-11-08T13:10:09-07:00">2020-11-08T13:10:09-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -95,7 +95,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#7c3cb05b1f85fec5b4cc4884334db9b65f573a73" class="src_link" title="app/poros/current_forecast.rb">app/poros/current_forecast.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">24</td>
+            <td class="cell--number">25</td>
             <td class="cell--number">24</td>
             <td class="cell--number">0</td>
             <td class="cell--number">24</td>
@@ -659,7 +659,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#7c3cb05b1f85fec5b4cc4884334db9b65f573a73" class="src_link" title="app/poros/current_forecast.rb">app/poros/current_forecast.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">24</td>
+            <td class="cell--number">25</td>
             <td class="cell--number">24</td>
             <td class="cell--number">0</td>
             <td class="cell--number">24</td>
@@ -1080,13 +1080,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
             
 
-            <code class="ruby">    @dt = Time.at(attr[:dt]).strftime(&#39;%m/%d/%Y %H:%M %Z&#39;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1097,7 +1097,7 @@
 
             
 
-            <code class="ruby">    @sunrise = Time.at(attr[:sunrise]).strftime(&#39;%m/%d/%Y %H:%M %Z&#39;)</code>
+            <code class="ruby">    @dt = Time.at(attr[:dt]).strftime(&#39;%m/%d/%Y %H:%M %Z&#39;)</code>
           </li>
         </div>
       
@@ -1108,7 +1108,7 @@
 
             
 
-            <code class="ruby">    @sunset = Time.at(attr[:sunset]).strftime(&#39;%m/%d/%Y %H:%M %Z&#39;)</code>
+            <code class="ruby">    @sunrise = Time.at(attr[:sunrise]).strftime(&#39;%m/%d/%Y %H:%M %Z&#39;)</code>
           </li>
         </div>
       
@@ -1119,7 +1119,7 @@
 
             
 
-            <code class="ruby">    @temp = attr[:temp]</code>
+            <code class="ruby">    @sunset = Time.at(attr[:sunset]).strftime(&#39;%m/%d/%Y %H:%M %Z&#39;)</code>
           </li>
         </div>
       
@@ -1130,7 +1130,7 @@
 
             
 
-            <code class="ruby">    @feels_like = attr[:feels_like]</code>
+            <code class="ruby">    @temp = attr[:temp]</code>
           </li>
         </div>
       
@@ -1141,7 +1141,7 @@
 
             
 
-            <code class="ruby">    @humidity = attr[:humidity]</code>
+            <code class="ruby">    @feels_like = attr[:feels_like]</code>
           </li>
         </div>
       
@@ -1152,7 +1152,7 @@
 
             
 
-            <code class="ruby">    @uvi = attr[:uvi]</code>
+            <code class="ruby">    @humidity = attr[:humidity]</code>
           </li>
         </div>
       
@@ -1163,7 +1163,7 @@
 
             
 
-            <code class="ruby">    @visibility = attr[:visibility]</code>
+            <code class="ruby">    @uvi = attr[:uvi]</code>
           </li>
         </div>
       
@@ -1174,7 +1174,7 @@
 
             
 
-            <code class="ruby">    @description = attr[:weather][0][:description]</code>
+            <code class="ruby">    @visibility = attr[:visibility]</code>
           </li>
         </div>
       
@@ -1185,7 +1185,7 @@
 
             
 
-            <code class="ruby">    @icon = attr[:weather][0][:icon]</code>
+            <code class="ruby">    @description = attr[:weather][0][:description]</code>
           </li>
         </div>
       
@@ -1196,12 +1196,23 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    @icon = attr[:weather][0][:icon]</code>
           </li>
         </div>
       
         <div>
           <li class="missed" data-hits="0" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="25">
             
             
 

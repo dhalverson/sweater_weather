@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Daily Forecast PORO' do
-  before :each do
-    @attr = {
+  it 'can create a daily forecast object' do
+
+    attr = {
         "dt": 1604858400,
         "sunrise": 1604842634,
         "sunset": 1604879421,
@@ -37,10 +38,8 @@ RSpec.describe 'Daily Forecast PORO' do
         "pop": 0.52,
         "uvi": 2.77
     }
-  end
 
-  it 'can create a daily forecast object' do
-    daily_forecast = DailyForecast.new(@attr)
+    daily_forecast = DailyForecast.new(attr)
 
     expect(daily_forecast).to be_a(DailyForecast)
 
