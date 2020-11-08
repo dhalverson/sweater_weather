@@ -1,18 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/forecast_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
       "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/facades/forecast_facade.rb": {
         "lines": [
           1,
@@ -126,26 +114,26 @@
           null,
           null,
           1,
-          1,
-          1,
-          1,
+          2,
+          2,
+          2,
           null,
           null,
           1,
           null,
           1,
-          1,
+          2,
           null,
           null,
           1,
-          1,
-          8,
+          2,
+          16,
           null,
           null,
           null,
           1,
-          1,
-          5,
+          2,
+          10,
           null,
           null,
           null
@@ -165,16 +153,16 @@
           null,
           null,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
           null,
           null
         ]
@@ -188,15 +176,15 @@
           null,
           null,
           1,
-          8,
-          8,
-          8,
-          8,
-          8,
+          16,
+          16,
+          16,
+          16,
+          16,
           null,
           null,
           1,
-          8,
+          16,
           null,
           null
         ]
@@ -212,13 +200,13 @@
           null,
           null,
           1,
-          5,
-          5,
-          5,
-          5,
-          5,
-          5,
-          5,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
           null,
           null
         ]
@@ -231,8 +219,22 @@
         ],
         "branches": {
         }
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/forecast_serializer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1604814121
+    "timestamp": 1604814630
   }
 }

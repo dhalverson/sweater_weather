@@ -47,7 +47,3 @@ RSpec.describe 'Retrieve weather' do
     expect(forecast[:data][:attributes][:hourly_weather][0][:icon]).to be_a(String)
   end
 end
-
-# GET /api/v1/forecast?location=denver,co
-# Content-Type: application/json
-# Accept: application/json
