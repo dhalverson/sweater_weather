@@ -19,7 +19,16 @@ RSpec.describe 'Retrieve weather' do
     expect(forecast[:data][:attributes][:daily_weather]).to be_an(Array) 
     expect(forecast[:data][:attributes][:hourly_weather]).to be_an(Array)
 
-    expect
+    expect(forecast[:data][:attributes][:current_weather][:dt]).to be_a(String)
+    expect(forecast[:data][:attributes][:current_weather][:sunrise]).to be_a(String)
+    expect(forecast[:data][:attributes][:current_weather][:sunset]).to be_a(String)
+    expect(forecast[:data][:attributes][:current_weather][:temp]).to be_a(Float)
+    expect(forecast[:data][:attributes][:current_weather][:feels_like]).to be_a(Float)
+    expect(forecast[:data][:attributes][:current_weather][:humidity]).to be_an(Integer)
+    expect(forecast[:data][:attributes][:current_weather][:uvi]).to be_a(Float)
+    expect(forecast[:data][:attributes][:current_weather][:visibility]).to be_an(Integer)
+    expect(forecast[:data][:attributes][:current_weather][:description]).to be_a(String)
+    expect(forecast[:data][:attributes][:current_weather][:icon]).to be_a(String)
     
     
   end
