@@ -1,6 +1,5 @@
 class Api::V1::ForecastController < ApplicationController
   def show
-    require 'pry'; binding.pry
     if params.has_key?(:location)
       render json: ForecastSerializer.new(ForecastFacade.total_forecast(params[:location]))
     else

@@ -48,7 +48,7 @@ RSpec.describe 'Retrieve weather' do
   end
 
   it 'responds if no params are provided' do
-    get '/api/v1/forecast?location=""'
+    get '/api/v1/forecast'
 
     expect(response).to be_successful
     
