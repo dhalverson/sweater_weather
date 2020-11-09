@@ -3,9 +3,13 @@ class Api::V1::TrailsController < ApplicationController
     location = params[:location]
     coordinates = LocationService.get_coordinates(location)
     
-    trails = HikingService.get_trails(coordinates)
-
-    forecast = ForecastService.get_forecast(coordinates)[:current]
+    attr = {
+      location: location,
+      trail_info: HikingService.get_trails(coordinates),
+      forecast_info: ForecastService.get_forecast(coordinates)[:current]
+    }
+    
+    result = Trail.new(attr)
 
 
     render json: trails
