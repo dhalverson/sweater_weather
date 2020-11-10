@@ -1,6 +1,46 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/backgrounds_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/facades/backgrounds_facade.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/background_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/poros/image.rb": {
         "lines": [
           1,
@@ -33,40 +73,11 @@
         "branches": {
         }
       },
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/backgrounds_serializer.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/forecast_serializer.rb": {
         "lines": [
           0,
           0,
           0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/facades/backgrounds_facade.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
           0,
           0,
           0,
@@ -207,23 +218,6 @@
         "branches": {
         }
       },
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/background_service.rb": {
-        "lines": [
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/location_service.rb": {
         "lines": [
           0,
@@ -270,6 +264,6 @@
         }
       }
     },
-    "timestamp": 1605048203
+    "timestamp": 1605048510
   }
 }
