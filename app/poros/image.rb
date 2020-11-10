@@ -1,17 +1,19 @@
 class Image
-  attr_reader :location,
-              :image_url,
-              :credit
+  attr_reader :image
+             
   def initialize(location, attr)
+    @image = image_hash(location, attr)
     @location = location
-    @image_url = attr[:results][0][:urls][:thumb]
-    @credit = image_credit(attr)
   end
 
-  def image_credit(attr)
+  def image_hash(location, attr)
     {
-      description: ImageCredit.new(attr).description,
-      credit: ImageCredit.new(attr).credit
+      location: location,
+      image_url: attr[:results][0][:urls][:thumb],
+      credit: {
+        description: attr[:results][0][:description],
+        credit: attr[:results][0][:user][:name]
+      }
     }
   end
 end

@@ -6,7 +6,7 @@ RSpec.describe 'Get background image for city' do
 
     expect(response).to be_successful
     result = JSON.parse(response.body,symbolize_names: true)
-
+    require 'pry'; binding.pry
     expect(result).to have_key :data
 
     expect(result[:data]).to have_key :id
