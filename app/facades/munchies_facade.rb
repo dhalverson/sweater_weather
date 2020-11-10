@@ -7,7 +7,7 @@ class MunchiesFacade
   def initialize(starting, ending, cuisine)
     @destination_city = ending.titleize
     @travel_time = route_travel_time(starting, ending)
-    @forecast = "forecast"
+    @forecast = route_forecast(ending)
     @restaurant = "restaurant"
   end
 
@@ -16,5 +16,9 @@ class MunchiesFacade
     travel_time[:route][:legs][0][:formattedTime]
   end
     
- 
+  def route_forecast(ending)
+    coordinates = LocationService.get_coordinates(ending)
+    ending_forecast = ForecastService.get_forecast(coordinates)
+    ending_forecast[:current][:weather][0][:description].titleize
+  end 
 end
