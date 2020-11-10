@@ -5,6 +5,7 @@ RSpec.describe 'Retrieve weather' do
     get '/api/v1/forecast?location=denver,co'
 
     expect(response).to be_successful
+
     forecast = JSON.parse(response.body, symbolize_names: true)
     
     expect(forecast[:data]).to have_key :id    
