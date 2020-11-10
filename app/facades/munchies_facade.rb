@@ -13,7 +13,7 @@ class MunchiesFacade
 
   def route_travel_time(starting, ending)
     travel_time = LocationService.get_travel_time(starting, ending)
-    travel_time[:route][:legs][0][:formattedTime]
+    travel_time[:route][:formattedTime]
   end
     
   def route_forecast(ending)
