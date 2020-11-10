@@ -183,36 +183,8 @@
         ],
         "branches": {
         }
-      },
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/poros/trail.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/hiking_service.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1605037033
+    "timestamp": 1605037107
   }
 }
