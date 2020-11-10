@@ -8,7 +8,7 @@ class MunchiesFacade
     @destination_city = ending.titleize
     @travel_time = route_travel_time(starting, ending)
     @forecast = route_forecast(ending)
-    @restaurant = "restaurant"
+    @restaurant = "route_restaurant(ending, cuisine)"
   end
 
   def route_travel_time(starting, ending)
