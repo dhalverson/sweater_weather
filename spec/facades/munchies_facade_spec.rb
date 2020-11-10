@@ -14,5 +14,6 @@ RSpec.describe 'Munchies Facade' do
     expect(munchie.forecast[:temperature]).to be_a(String)
     expect(munchie.restaurant[:name]).to be_a(String)
     # needed more time to make VCR, would then also update these tests to actual values
+    # this is working in my existing forecast test
    end
 end

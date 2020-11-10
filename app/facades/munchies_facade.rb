@@ -32,6 +32,7 @@ class MunchiesFacade
       name: restaurant[:businesses][0][:name],
       address: restaurant[:businesses][0][:location][:display_address].join(', ')
     }
-    # need more time to moe to PORO
+    # need more time to move to PORO
+    # travel time isn't quite working as expected yet, need more time
   end
 end
