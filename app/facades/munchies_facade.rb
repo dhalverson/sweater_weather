@@ -19,11 +19,18 @@ class MunchiesFacade
   def route_forecast(ending)
     coordinates = LocationService.get_coordinates(ending)
     ending_forecast = ForecastService.get_forecast(coordinates)
-    ending_forecast[:current][:weather][0][:description].titleize
+    data = {
+     summary: ending_forecast[:current][:weather][0][:description].titleize,
+     temperature: ending_forecast[:current][:temp].to_s
+    }
   end 
 
   def route_restaurant(ending, cuisine)
-    travel_time = (Time.now + @travel_time.to_i)
-    restaurant = RestaurantService.get_restaurants(ending, travel_time, cuisine)
+    time = Time.now.to_i + @travel_time.to_i
+    restaurant = RestaurantService.get_restaurants(ending, time, cuisine)
+    data ={
+      name: restaurant[:businesses][0][:name],
+      address: restaurant[:businesses][0][:location][:display_address].join(', ')
+    }
   end
 end
