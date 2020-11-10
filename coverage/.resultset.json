@@ -1,6 +1,19 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/munchies_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/facades/munchies_facade.rb": {
         "lines": [
           1,
@@ -22,6 +35,11 @@
           null,
           null,
           1,
+          1,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           1,
@@ -70,23 +88,25 @@
           null
         ]
       },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/restaurant_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/models/application_record.rb": {
         "lines": [
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/munchies_serializer.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           0,
           0,
           0
@@ -255,24 +275,8 @@
         ],
         "branches": {
         }
-      },
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/restaurant_service.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1605028217
+    "timestamp": 1605029283
   }
 }

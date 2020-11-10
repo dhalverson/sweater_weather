@@ -8,7 +8,7 @@ class MunchiesFacade
     @destination_city = ending.titleize
     @travel_time = route_travel_time(starting, ending)
     @forecast = route_forecast(ending)
-    @restaurant = "route_restaurant(ending, cuisine)"
+    @restaurant = route_restaurant(ending, cuisine)
   end
 
   def route_travel_time(starting, ending)
@@ -21,4 +21,9 @@ class MunchiesFacade
     ending_forecast = ForecastService.get_forecast(coordinates)
     ending_forecast[:current][:weather][0][:description].titleize
   end 
+
+  def route_restaurant(ending, cuisine)
+    travel_time = (Time.now + @travel_time.to_i)
+    restaurant = RestaurantService.get_restaurants(ending, travel_time, cuisine)
+  end
 end
