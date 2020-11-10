@@ -1,68 +1,49 @@
-Create a branch off of your Sweater Weather project called final_assessment.
-As you work, you should commit to this branch every 15 minutes.
-DO NOT push your code to your GitHub repo until the end of the 3 hour assessment
-Complete the user story below. You should:
+Create a branch off of your Sweater Weather project called final_retake.
+2. As you work, you should commit to this branch every 15 minutes.
+3. DO NOT push your code to your GitHub repo until the end of the 3 hour assessment
+4. Complete the assignment below. You should:
 TDD all of your work
 Prioritize getting your code functional before attempting any refactors
 Write/refactor your code to achieve good code quality
 Assignment
-You will build an endpoint that will retrieve the forecast for a location and nearby trails with the distance to each trail.
+You will build an endpoint that will retrieve food and forecast information for a destination city.
 
 Your endpoint should follow this format:
-GET /api/v1/trails?location=denver,co
-
-Your API will return:
-- current temperature and conditions for the start location(weather)
-- name of the trail (hiking)
-- summary of each trail (hiking)
-- difficulty of each trail (hiking)
-- location of each trail (hiking)
-- estimated distance to each trail (map)
-
+GET /api/v1/munchies?start=denver,co&end=pueblo,co&food=chinese
+- Your API will return:
+- the destination city
+- estimated travel time from start city to destination city
+the name and address of a restaurant serving THE SPECIFIED TYPE of cuisine that WILL BE OPEN at your estimated time of arrival.
+- the current forecast of the destination city
 
 Your response should be in the format below:
 {
   "data": {
     "id": "null",
-    "type": "trail",
+    "type": "munchie",
     "attributes": {
-      "location": "denver,co",
+      "destination_city": "Pueblo, CO",
+      "travel_time": "1 hours 48 min",
       "forecast": {
         "summary": "Cloudy with a chance of meatballs",
         "temperature": "83"
       },
-      "trails": [
-        {
-          "name": "Boulder Skyline Traverse",
-          "summary": "The classic long mountain route in Boulder."
-          "difficulty": "black"
-          "location": "Superior, Colorado"
-          "distance_to_trail": "23.008"
-        },
-        {
-          "name": "Bear Peak Out and Back",
-          "summary": "A must-do hike for Boulder locals and visitors alike!"
-          "difficulty": "black"
-          "location": "Boulder, Colorado"
-          "distance_to_trail": "30.098"
-        },
-        {...}
-      ]
+      "restaurant": {
+        "name": "Chinese Restaurant",
+        "address": "4602 N. Elizabeth St, Ste 120, Pueblo, CO 81008"
+      }
     }
   }
 }
 APIs
-You are required to consume the following APIs:
-
 MapQuest Directions API
-to find out the distance from the start location to the trail location
-Sign Up for Key: https://developer.mapquest.com/
-Documentation: https://developer.mapquest.com/documentation/directions-api/
-
-Hiking Project Data API
-Use the getTrails endpoint to find trails near the location
-Documentation: https://www.hikingproject.com/data
-
+to find out how long it will take to travel from your start location to your end location.
+https://developer.mapquest.com/documentation/directions-api/route/get/
+Yelp Fusion API
+to find the name and address of a restaurant in your end location
+Restaurants should be open at the time of arrival
+Restaurants should serve the type of food specified in the request
+https://www.yelp.com/developers/documentation/v3/business_search
 Open Weather Map API
-to find the forecast for the current location
+to find the forecast in the end location at the time of arrival.
 https://openweathermap.org/api
