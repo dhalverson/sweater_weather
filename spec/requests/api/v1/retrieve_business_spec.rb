@@ -6,7 +6,7 @@ RSpec.describe 'Retrieve businesses' do
 
     expect(response).to be_successful
     business = JSON.parse(response.body, symbolize_names: true)
-    # require 'pry'; binding.pry
+    require 'pry'; binding.pry
     expect(business).to be_a(Hash)
     expect(business).to have_key :data
     expect(business[:data]).to be_a(Hash)

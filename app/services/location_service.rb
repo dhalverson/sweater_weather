@@ -8,12 +8,12 @@ class LocationService
     JSON.parse(response.body, symbolize_names: true)[:results][0][:locations][0][:latLng]
   end
 
-  def self.get_distance(starting, trails)
+  def self.get_travel_time(starting, ending)
     conn = Faraday.new('http://www.mapquestapi.com')
     response = conn.get('/directions/v2/route') do |req|
       req.params['key'] = ENV['MAP_API_KEY']
       req.params['from'] = starting
-      req.params['to'] = 1
+      req.params['to'] = ending
     end
     JSON.parse(response.body, symbolize_names: true)
   end
