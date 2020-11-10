@@ -26,6 +26,7 @@ RSpec.describe 'Image Credit PORO' do
                 ]
           }    
     image_credit = ImageCredit.new(attr)
+    expect(image_credit).to be_an(ImageCredit)
     expect(image_credit.credit).to eq('Joshua Forbes')
     expect(image_credit.description).to eq('Sleeping Owl')
   end
