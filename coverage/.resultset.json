@@ -1,9 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/poros/travel_time.rb": {
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/poros/route_forecast.rb": {
         "lines": [
           1,
+          1,
+          null,
           1,
           1,
           1,
@@ -85,6 +87,7 @@
           0,
           0,
           0,
+          null,
           0,
           0
         ],
@@ -125,6 +128,18 @@
           0,
           0,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/poros/travel_time.rb": {
+        "lines": [
           0,
           0,
           0,
@@ -304,6 +319,6 @@
         }
       }
     },
-    "timestamp": 1605032775
+    "timestamp": 1605033487
   }
 }

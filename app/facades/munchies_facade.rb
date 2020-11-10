@@ -20,8 +20,8 @@ class MunchiesFacade
     coordinates = LocationService.get_coordinates(ending)
     ending_forecast = ForecastService.get_forecast(coordinates)
     data = {
-     summary: ending_forecast[:current][:weather][0][:description].titleize,
-     temperature: ending_forecast[:current][:temp].to_s
+     summary: RouteForecast.new(ending_forecast).summary,
+     temperature: RouteForecast.new(ending_forecast).temperature
     }
   end 
 
@@ -32,5 +32,6 @@ class MunchiesFacade
       name: restaurant[:businesses][0][:name],
       address: restaurant[:businesses][0][:location][:display_address].join(', ')
     }
+    # need more time to moe to PORO
   end
 end
