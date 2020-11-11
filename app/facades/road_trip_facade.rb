@@ -10,6 +10,7 @@ class RoadTripFacade
       }
     else
       travel_time_hours = (((RoadTripFacade.get_travel_time(origin, destination).to_f / 60) / 60).round + 1)
+
       data = {
         start_city: origin,
         end_city: destination,
