@@ -22,6 +22,106 @@
           null
         ]
       },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/road_trip_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/facades/road_trip_facade.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/location_service.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/forecast_service.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/poros/road_trip.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/users_serializer.rb": {
         "lines": [
           0,
@@ -249,53 +349,8 @@
         ],
         "branches": {
         }
-      },
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/location_service.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/services/forecast_service.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1605061534
+    "timestamp": 1605068943
   }
 }

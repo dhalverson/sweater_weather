@@ -14,4 +14,13 @@ RSpec.describe 'Location Service' do
     expect(result.keys.count).to eq(2)
     expect(result.values.count).to eq(2)
   end
+
+  it 'returns directions when given a start and end' do
+    origin = 'denver,co'
+    destination = 'pueblo,co'
+    result = LocationService.get_distance(origin, destination)
+    require 'pry'; binding.pry
+    expect(result).to be_a(Hash)
+
+  end
 end
