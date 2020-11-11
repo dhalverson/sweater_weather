@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Road Trip Facade' do
-  it 'Roadtrip' do
+  it 'Roadtrip', :vcr do
     origin = 'Denver,CO'
     destination = 'Pueblo,CO'
 

@@ -1,14 +1,4 @@
 class RoadTripFacade 
-  def self.get_travel_time(origin, destination)
-    road_trip = LocationService.get_distance(origin, destination)
-    road_trip[:route][:realTime] ||= 'Impossible Route'
-  end
-
-  def self.get_destination_forecast(destination)
-    coordinates = LocationService.get_coordinates(destination)
-    forecast = ForecastService.get_forecast(coordinates)
-  end
-
   def self.create_road_trip(origin, destination)
     travel_time = RoadTripFacade.get_travel_time(origin, destination)
     if travel_time == "Impossible Route"
@@ -31,6 +21,18 @@ class RoadTripFacade
       }
     end
     RoadTrip.new(data)
+  end
+
+  private_class_method
+
+    def self.get_travel_time(origin, destination)
+    road_trip = LocationService.get_distance(origin, destination)
+    road_trip[:route][:realTime] ||= 'Impossible Route'
+  end
+
+  def self.get_destination_forecast(destination)
+    coordinates = LocationService.get_coordinates(destination)
+    forecast = ForecastService.get_forecast(coordinates)
   end
 end
 
