@@ -15,7 +15,7 @@ Sweater Weather is a JSON API compliant Rails App that consumes several APis inc
 
 - MapQuest Directions API to find out the distance from the start location to the trail location:
 
-Documentation: https://developer.mapquest.com/documentation/directions-api/
+https://developer.mapquest.com/documentation/directions-api/
 
 - Open Weather Map API to find the forecast for the current location:
 
