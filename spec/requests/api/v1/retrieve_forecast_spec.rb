@@ -42,7 +42,7 @@ RSpec.describe 'Retrieve weather' do
     expect(forecast[:data][:attributes][:daily_weather][0][:icon]).to be_a(String)
 
     expect(forecast[:data][:attributes][:hourly_weather][0][:time]).to be_a(String)
-    expect(forecast[:data][:attributes][:hourly_weather][0][:wind_speed]).to be_a(Float)
+    expect(forecast[:data][:attributes][:hourly_weather][0][:wind_speed]).to be_a(Numeric)
     expect(forecast[:data][:attributes][:hourly_weather][0][:wind_direction]).to be_a(String)
     expect(forecast[:data][:attributes][:hourly_weather][0][:conditions]).to be_a(String)
     expect(forecast[:data][:attributes][:hourly_weather][0][:icon]).to be_a(String)
