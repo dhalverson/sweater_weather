@@ -27,14 +27,62 @@ Sweater Weather allows you to request current, hourly, and daily forecasts for a
 There are currently five user assessable endpoints including:
 
 ```GET /api/v1/forecast?location=denver,co ```
+
 ```GET /api/v1/backgrounds?location=denver,co ```
+
 ```POST /api/v1/users ```
+
+Please include the params in body as follows:
+```body:
+{
+  "email": "whatever@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+```
+
 ```POST /api/v1/sessions ```
+
+Please include the params in body as follows:
+```body:
+{
+  "email": "whatever@example.com",
+  "password": "password"
+}
+```
+
 ```POST /api/v1/road_trip ```
+
+Please include the params in body as follows:
+```body:
+{
+  "origin": "Denver,CO",
+  "destination": "Pueblo,CO",
+  "api_key": "jgn983hy48thw9begh98h4539h4"
+}
+```
 
 ## Getting Started
 
+Currently not on a production server, please clone down a copy.
 
+1. Install and update the gems using
+```bundle install``
+
+2. Run Figaro to store your keys
+```bundle exec figaro install```
+
+3. You will need API keys for Mapquest, OpenWeather, and Unsplash. These will need to be added to the application.yml file with the variables:
+  - WEATHER_API_KEY
+  - MAP_API_KEY
+  - UNSPLASH_KEY
+  
+4. Using an API tool such as Postman, with your Rails Server running on Port 3000, run the above requests.
 
 ## Contact
 
+This project was completed in five days using continuous deployment, TDD and is JSON 1.0 compliant. Questions? Comments? Feedback?
+
+Daniel Halverson 
+- [GitHub](https://github.com/dhalverson)
+- [Linkedin](https://www.linkedin.com/in/daniel-halverson/)
