@@ -28,11 +28,13 @@ RSpec.describe 'Image PORO' do
     }
 
     image = Image.new(location, attr)
-  
+
     expect(image).to be_an(Image)
-    expect(image.credit).to eq({:description=>"Sleeping Owl", :credit=>"Joshua Forbes"})
-    expect(image.image_url).to eq('https://images.unsplash.com/photo-1578983427937-26078ee3d9d3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE4MTU3N30')
-    expect(image.location).to eq('denver,co')
-    expect(Image.new(location,attr).image_credit(attr)).to eq({:credit=>"Joshua Forbes", :description=>"Sleeping Owl"})
+    expect(image.image).to be_a(Hash)
+    expect(image.image[:location]).to eq('denver,co')
+    expect(image.image[:image_url]).to eq('https://images.unsplash.com/photo-1578983427937-26078ee3d9d3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE4MTU3N30')
+    expect(image.image[:credit]).to be_a(Hash)
+    expect(image.image[:credit][:description]).to eq('Sleeping Owl')
+    expect(image.image[:credit][:credit]).to eq('Joshua Forbes')
   end
 end
