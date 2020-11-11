@@ -13,13 +13,16 @@ A JSON API that returns current, hourly, and daily forecasts for a city, a backg
 
 Sweater Weather is a JSON API compliant Rails App that consumes several APis including:
 
-- MapQuest Directions API to find out the distance from the start location to the trail location
+- MapQuest Directions API to find out the distance from the start location to the trail location:
+
 Documentation: https://developer.mapquest.com/documentation/directions-api/
 
 - Open Weather Map API to find the forecast for the current location:
+
 https://openweathermap.org/api
 
 - Unsplash Images API:
+
 https://unsplash.com/developers
 
 Sweater Weather allows you to request current, hourly, and daily forecasts for a city, register and login, and receive an API key to access the application. Registered users can also view road trip information using a origin and destination city, including real time travel time information and destination weather at their time of arrival.
