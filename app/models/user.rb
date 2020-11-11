@@ -2,5 +2,8 @@ class User < ApplicationRecord
   has_secure_password
 
   validates :email, presence: true, uniqueness: true
-  validates :api_key, presence: true
+
+  before_create do
+    self.api_key = SecureRandom.hex
+  end
 end

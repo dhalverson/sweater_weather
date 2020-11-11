@@ -1,26 +1,35 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/models/application_record.rb": {
-        "lines": [
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/models/user.rb": {
         "lines": [
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/users_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
       },
       "/Users/danielhalverson/turing/3module/5week/sweater_weather/app/serializers/backgrounds_serializer.rb": {
         "lines": [
@@ -128,6 +137,7 @@
           0,
           0,
           0,
+          null,
           0,
           0
         ],
@@ -284,6 +294,6 @@
         }
       }
     },
-    "timestamp": 1605049599
+    "timestamp": 1605053878
   }
 }

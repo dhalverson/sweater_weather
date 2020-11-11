@@ -15,5 +15,6 @@ class Image
         credit: attr[:results][0][:user][:name]
       }
     }
+    # poro
   end
 end
