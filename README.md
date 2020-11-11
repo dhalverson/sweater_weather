@@ -69,10 +69,12 @@ Please include the params in body as follows:
 
 Currently not on a production server, please clone down a copy.
 
-1. Install and update the gems using
+1. Install and update the gems using:
+
 ```bundle install``
 
-2. Run Figaro to store your keys
+2. Run Figaro to store your keys:
+
 ```bundle exec figaro install```
 
 3. You will need API keys for Mapquest, OpenWeather, and Unsplash. These will need to be added to the application.yml file with the variables:
@@ -84,7 +86,11 @@ Currently not on a production server, please clone down a copy.
 
 ## Contact
 
-This project was completed in five days using continuous deployment, TDD and is JSON 1.0 compliant. Questions? Comments? Feedback?
+This project was completed in five days using continuous deployment, TDD and is JSON 1.0 compliant.
+
+Later iterations will include some refactoring, optimization of API calls, and implementaion into another language.
+
+Questions? Comments? Feedback?
 
 Daniel Halverson 
 - [GitHub](https://github.com/dhalverson)
