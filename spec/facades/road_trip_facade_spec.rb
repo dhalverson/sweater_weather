@@ -15,4 +15,18 @@ RSpec.describe 'Road Trip Facade' do
     expect(trip.weather_at_eta[:temperature]).to eq(34.2)
     expect(trip.weather_at_eta[:conditions]).to eq('clear sky')
   end
+
+  it 'Impossible roadtrip', :vcr do
+    origin = 'Denver,CO'
+    destination = 'London,UK'
+
+    trip = RoadTripFacade.create_road_trip(origin, destination)
+
+    expect(trip).to be_a(RoadTrip)
+
+    expect(trip.start_city).to eq('Denver,CO')
+    expect(trip.end_city).to eq('London,UK')
+    expect(trip.travel_time).to eq('Impossible Route')
+    expect(trip.weather_at_eta).to eq('Weather unavailable')
+  end  
 end
