@@ -7,5 +7,4 @@ class Api::V1::ForecastController < ApplicationController
     end
   end
 end
-
-
+# this would need additional edge testing for non correct cities

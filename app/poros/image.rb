@@ -15,6 +15,6 @@ class Image
         credit: attr[:results][0][:user][:name]
       }
     }
-    # poro
+    # This is creating an image from the backgrounds facade, how to improve this hash
   end
 end
