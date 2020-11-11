@@ -45,4 +45,21 @@ RSpec.describe 'User Registration' do
     expect(response.status).to eq(401)
     expect(response.body).to eq('Password can\'t be blank and Password confirmation can\'t be blank')
   end
+
+  it 'returns an error if you use a duplicate email' do
+    body = {
+      "email": "whatever@example.com",
+      "password": '123',
+      "password_confirmation": '123'
+    }
+
+    post '/api/v1/users', params: body
+    expect(response).to be_successful
+
+    post '/api/v1/users', params: body
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+    expect(response.body).to eq('Email has already been taken')
+  end
 end
