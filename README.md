@@ -67,13 +67,13 @@ Please include the params in body as follows:
 ```
 ## Tech Stack
 
-Ruby 2.5.3
-Rails 6.0.3
-PostgreSQL database
-RSpec for testing
-VCR for mocking API requests
-Bcrypt for login
-FastJSONAPI for JSON API compliance
+- Ruby 2.5.3
+- Rails 6.0.3
+- PostgreSQL database
+- RSpec for testing
+- VCR for mocking API requests
+- Bcrypt for login
+- FastJSONAPI for JSON API compliance
 
 ## Getting Started
 
