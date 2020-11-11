@@ -21,6 +21,7 @@ class RoadTripFacade
       }
     end
     RoadTrip.new(data)
+    # Time does not work over 24 hours, so I would if I had more time update this
   end
 
   private_class_method
@@ -35,4 +36,3 @@ class RoadTripFacade
     forecast = ForecastService.get_forecast(coordinates)
   end
 end
-

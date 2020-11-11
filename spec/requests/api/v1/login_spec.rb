@@ -37,4 +37,23 @@ RSpec.describe 'User Login' do
     expect(login[:data][:attributes]).to have_key :api_key
     expect(login[:data][:attributes][:api_key]).to be_a(String)
   end
+
+  it 'returns an error if invalid credentials are provided' do
+    user = User.create!(
+      email: 'whatever@example.com',
+      password: 'password',
+      password_confirmation: 'password'
+    )
+    
+    body = {
+      "email": "whatever@example.com",
+      "password": "wrongpassword"
+    }
+    
+    post '/api/v1/sessions', params: body
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+    expect(response.body).to eq('Invalid Credentials')
+  end
 end
