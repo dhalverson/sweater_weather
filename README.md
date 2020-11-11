@@ -6,6 +6,7 @@ A JSON API that returns current, hourly, and daily forecasts for a city, a backg
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+* [Tech Stack](#tech-stack)
 * [Getting Started](#getting-started)
 * [Contact](#contact)
 
@@ -64,6 +65,15 @@ Please include the params in body as follows:
   "api_key": "jgn983hy48thw9begh98h4539h4"
 }
 ```
+## Tech Stack
+
+Ruby 2.5.3
+Rails 6.0.3
+PostgreSQL database
+RSpec for testing
+VCR for mocking API requests
+Bcrypt for login
+FastJSONAPI for JSON API compliance
 
 ## Getting Started
 
