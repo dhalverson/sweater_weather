@@ -42,9 +42,10 @@ RSpec.describe 'User Registration' do
 
     post '/api/v1/users', params: body
 
+    errors = JSON.parse(response.body, symbolize_names: true)
     expect(response).to_not be_successful
     expect(response.status).to eq(401)
-    expect(response.body).to eq('Password can\'t be blank and Password confirmation can\'t be blank')
+    expect(errors[:errors]).to eq(["Password can't be blank", "Password confirmation can't be blank"])
   end
 
   it 'returns an error if you use a duplicate email' do
@@ -59,8 +60,9 @@ RSpec.describe 'User Registration' do
 
     post '/api/v1/users', params: body
 
+    errors = JSON.parse(response.body, symbolize_names: true)
     expect(response).to_not be_successful
     expect(response.status).to eq(401)
-    expect(response.body).to eq('Email has already been taken')
+    expect(errors[:errors]).to eq(["Email has already been taken"])
   end
 end
