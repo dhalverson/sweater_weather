@@ -52,8 +52,9 @@ RSpec.describe 'User Login' do
     
     post '/api/v1/sessions', params: body
 
+    errors = JSON.parse(response.body, symbolize_names: true)
     expect(response).to_not be_successful
     expect(response.status).to eq(401)
-    expect(response.body).to eq('Invalid Credentials')
+    expect(errors[:errors]).to eq('Invalid Credentials')
   end
 end
