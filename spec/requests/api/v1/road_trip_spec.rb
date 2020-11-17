@@ -39,7 +39,7 @@ RSpec.describe 'Road Trip' do
     expect(road_trip[:data][:attributes][:travel_time]).to be_a(String)
     expect(road_trip[:data][:attributes]).to have_key :weather_at_eta
     expect(road_trip[:data][:attributes][:weather_at_eta]).to be_a(Hash)
-    expect(road_trip[:data][:attributes][:weather_at_eta][:temperature]).to be_an(Float)
+    expect(road_trip[:data][:attributes][:weather_at_eta][:temperature]).to be_a(Numeric)
     expect(road_trip[:data][:attributes][:weather_at_eta][:conditions]).to be_a(String)
   end
 
