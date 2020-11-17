@@ -42,7 +42,7 @@ RSpec.describe 'Retrieve weather' do
     expect(forecast[:data][:attributes][:daily_weather][0][:icon]).to be_a(String)
 
     expect(forecast[:data][:attributes][:hourly_weather][0][:time]).to be_a(String)
-    expect(forecast[:data][:attributes][:hourly_weather][0][:wind_speed]).to be_a(Float)
+    expect(forecast[:data][:attributes][:hourly_weather][0][:wind_speed]).to be_a(Numeric)
     expect(forecast[:data][:attributes][:hourly_weather][0][:wind_direction]).to be_a(String)
     expect(forecast[:data][:attributes][:hourly_weather][0][:conditions]).to be_a(String)
     expect(forecast[:data][:attributes][:hourly_weather][0][:icon]).to be_a(String)
@@ -53,8 +53,9 @@ RSpec.describe 'Retrieve weather' do
 
     expect(response).to be_successful
     
-    forecast = JSON.parse(response.body, symbolize_names: true)
-    expect(forecast[:error]).to eq('Please enter a valid city and state!')
-    expect(forecast[:status]).to eq(404)
+    errors = JSON.parse(response.body, symbolize_names: true)
+
+    expect(errors[:errors]).to eq('Please enter a valid city and state!')
+    expect(errors[:status]).to eq(404)
   end
 end

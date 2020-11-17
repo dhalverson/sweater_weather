@@ -42,7 +42,7 @@ RSpec.describe 'Forecast Service' do
     expect(hourly).to have_key :dt
     expect(hourly[:dt]).to be_an(Integer)
     expect(hourly).to have_key :wind_speed
-    expect(hourly[:wind_speed]).to be_a(Float)
+    expect(hourly[:wind_speed]).to be_a(Numeric)
     expect(hourly).to have_key :wind_deg
     expect(hourly[:wind_deg]).to be_an(Integer)
     expect(hourly[:weather][0]).to have_key :description
@@ -56,7 +56,7 @@ RSpec.describe 'Forecast Service' do
     expect(daily).to have_key :dt
     expect(daily[:dt]).to be_an(Integer)
     expect(daily).to have_key :sunrise
-    expect(daily[:wind_speed]).to be_a(Float)
+    expect(daily[:wind_speed]).to be_a(Numeric)
     expect(daily).to have_key :sunset
     expect(daily[:wind_deg]).to be_an(Integer)
     expect(daily[:temp]).to have_key :max
