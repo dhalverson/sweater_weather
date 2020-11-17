@@ -53,8 +53,9 @@ RSpec.describe 'Retrieve weather' do
 
     expect(response).to be_successful
     
-    forecast = JSON.parse(response.body, symbolize_names: true)
-    expect(forecast[:error]).to eq('Please enter a valid city and state!')
-    expect(forecast[:status]).to eq(404)
+    errors = JSON.parse(response.body, symbolize_names: true)
+
+    expect(errors[:errors]).to eq('Please enter a valid city and state!')
+    expect(errors[:status]).to eq(404)
   end
 end
